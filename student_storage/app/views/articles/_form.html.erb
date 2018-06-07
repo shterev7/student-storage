@@ -1,0 +1,45 @@
+<%= form_for @article do |form| %>
+
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@article.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p id="firstname">
+    <%= form.label :firstname %><br>
+    <%= form.text_field :firstname %>
+  </p>
+
+  <p id="lastname">
+    <%= form.label :lastname %><br>
+    <%= form.text_field :lastname %>
+  </p>
+  <p id="fn">
+    <%= form.label :fn %><br>
+    <%= form.text_field :fn %>
+  </p>
+  <p id="course">
+    <%= form.label :course %><br>
+    <%= form.text_field :course %>
+  </p>
+  <p id="specialty">
+    <%= form.label :specialty %><br>
+    <%= form.text_field :specialty %>
+  </p>
+
+  <p>
+    <%= form.submit 'Create Student', :class =>'submit_class' %>
+  </p>
+
+<% end %>
+
+<%= render template: "layouts/application" %>

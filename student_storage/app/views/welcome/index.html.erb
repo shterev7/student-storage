@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial;
+      padding: 10px;
+      background: #f1f1f1;
+    }
+
+    /* Header/Blog Title */
+    .header {
+      padding: 30px;
+      text-align: center;
+      background: white;
+    }
+
+    .header h1 {
+      font-size: 50px;
+    }
+
+    /* Style the top navigation bar */
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    /* Style the topnav links */
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    /* Change color on hover */
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    .leftcolumn {
+      float: left;
+      width: 75%;
+    }
+
+    /* Right column */
+    .rightcolumn {
+      float: left;
+      width: 25%;
+      background-color: #f1f1f1;
+      padding-left: 20px;
+    }
+
+    /* Fake image */
+    .fakeimg {
+      /*background-color: #aaa;*/
+      /*width: 100%;*/
+      padding: 20px;
+    }
+
+    /* Add a card effect for articles */
+    .card {
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #ddd;
+      margin-top: 20px;
+    }
+
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+      .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+      .topnav a {
+        float: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Welcome to Student Storage!</h1>
+</div>
+
+<div class="topnav">
+  <%= link_to 'Student storage', controller: 'articles' %>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>NEWS</h2>
+      <h5>Some news, June 7, 2018</h5>
+      <p>Fossil fuel stocks have long been a safe financial bet. With price rises projected until 2040* and governments prevaricating or rowing back on the Paris Agreement, investor confidence is set to remain high.
+
+        However, new research suggests that the momentum behind technological change in the global power and transportation sectors will lead to a dramatic decline in demand for fossil fuels in the near future.
+        The study indicates that this will now happen regardless of apparent market certainty or the adoption of climate policies – or lack thereof – by major nations.
+
+        Detailed simulations produced by an international team of economists and policy experts show this fall in demand has the potential to leave vast reserves of fossil fuels as “stranded assets”: abruptly shifting from high to low value sometime before 2035.
+
+        Such a sharp slump in fossil fuel price could cause a huge “carbon bubble” built on long-term investments to burst. According to the study, the equivalent of between one and four trillion US dollars could be wiped off the global economy in fossil fuel assets alone. A loss of US$0.25 trillion triggered the crash of 2008 by comparison.
+
+        Publishing their findings today in the journal Nature Climate Change, researchers from Cambridge University (UK), Radboud University (NL), the Open University (UK), Macau University, and Cambridge Econometrics, argue that there will be clear economic winners and losers as a consequence.
+
+        Japan, China and many EU nations currently rely on high-cost fossil fuel imports to meet energy needs. They could see national expenditure fall and – with the right investment in low-carbon technologies – a boost to Gross Domestic Product as well as increased employment in sustainable industries.
+
+      </p>
+    </div>
+    <div class="card">
+      <h2>EVENTS</h2>
+      <h5>2018 Random Event, June 7, 2018</h5>
+      <p>If you are planning to come to one of our Undergraduate Open Days this year, you can register below with your name and email address. Registration for our Open Days is not compulsory, but by entering your details you sign up for our Open Days newsletter, which will provide you with lots of useful information in the weeks before the event.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Us</h2>
+      <div class="fakeimg" style="height:100px;"></div>
+      <p>Some text about us..lalallalala</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Fake post</p></div>
+      <div class="fakeimg"><p>Fake post</p></div>
+      <div class="fakeimg"><p>Fake post</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Us</h3>
+      <p><a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="container-fluid" style='margin-left:15px'>
+    <div class="contactline">
+      <p><a href="#" target="blank">© 2018 Student Storage. All Rights Reserved.</a>  |   <a href="#" target="blank">Privacy Policy</a></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+<%= render template: "layouts/application" %>
