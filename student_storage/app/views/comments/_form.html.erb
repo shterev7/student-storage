@@ -1,15 +1,17 @@
 <%= form_for([@article, @article.comments.build]) do |form| %>
-  <p>
+  <p><center>
     <%= form.label :commenter %><br>
     <%= form.text_field :commenter %>
+</center>
   </p>
-  <p>
+  <p><center>
     <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+    <%= form.text_area :body, id:"comment_body" %>
+</center></p>
+  <p><center>
+    <%= form.submit'Add comment', :class =>'submit_class'%>
+</center></p>
+  <br>
 <% end %>
 
-<%= render template: "layouts/application" %>
+<%#= render template: "layouts/application" %>

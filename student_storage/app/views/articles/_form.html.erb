@@ -4,7 +4,7 @@
     <div id="error_explanation">
       <h2>
         <%= pluralize(@article.errors.count, "error") %> prohibited
-        this article from being saved:
+        this student from being saved:
       </h2>
       <ul>
         <% @article.errors.full_messages.each do |msg| %>
@@ -14,32 +14,32 @@
     </div>
   <% end %>
 
-  <p id="firstname">
+  <p id="firstname"><center>
     <%= form.label :firstname %><br>
     <%= form.text_field :firstname %>
-  </p>
+</center></p>
 
-  <p id="lastname">
+  <p id="lastname"><center>
     <%= form.label :lastname %><br>
     <%= form.text_field :lastname %>
-  </p>
-  <p id="fn">
+</center></p>
+  <p id="fn"><center>
     <%= form.label :fn %><br>
     <%= form.text_field :fn %>
-  </p>
-  <p id="course">
+</center></p>
+  <p id="course"><center>
     <%= form.label :course %><br>
     <%= form.text_field :course %>
-  </p>
-  <p id="specialty">
+</center></p>
+  <p id="specialty"><center>
     <%= form.label :specialty %><br>
     <%= form.text_field :specialty %>
-  </p>
+</center></p>
 
-  <p>
+  <p><center>
     <%= form.submit 'Create Student', :class =>'submit_class' %>
-  </p>
+</center></p>
 
 <% end %>
 
-<%= render template: "layouts/application" %>
+<%#= render template: "layouts/application" %>

@@ -1,33 +1,33 @@
-<p>
+<p><center>
     <strong>First Name:</strong>
     <%= @article.firstname %>
-</p>
+</center></p>
 
-<p>
+<p><center>
     <strong>Last Name:</strong>
     <%= @article.lastname %>
-</p>
+</center></p>
 
-<p>
+<p><center>
   <strong>Faculty Number:</strong>
   <%= @article.fn %>
-</p>
+</center></p>
 
-<p>
+<p><center>
   <strong>Course:</strong>
   <%= @article.course %>
-</p>
+</center></p>
 
-<p>
+<p><center>
   <strong>Specialty:</strong>
   <%= @article.specialty %>
-</p>
+</center></p>
 
-<h2>Comments</h2>
+<h2><center>Comments</center></h2>
 <%= render @article.comments %>
 
-<h2>Add a comment:</h2>
+<h2><center>Add a comment:</center></h2>
 <%= render 'comments/form' %>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<center><%= link_to 'Edit Student', edit_article_path(@article), id:"back_edit" %></center> <br>
+<center> <%= link_to 'Back', articles_path, id:"back" %></center>
